@@ -24,7 +24,7 @@ class cron_ipdel extends cron_abstract
      */
     public function run() {
         
-        empty($cron['ipdel_day']) && $cron['ipdel_day'] = 7;
+        empty($this->configure['ipdel_day']) && $cron['ipdel_day'] = 7;
         
         $deltime = gmtime() - $cron['ipdel_day'] * 3600 * 24;
         $sql = "DELETE FROM " . $ecs->table('stats') .
