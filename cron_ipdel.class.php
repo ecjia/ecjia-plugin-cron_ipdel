@@ -23,15 +23,10 @@ class cron_ipdel extends cron_abstract
      * 计划任务执行方法
      */
     public function run() {
-        
-        empty($this->configure['ipdel_day']) && $cron['ipdel_day'] = 7;
-        
-        $deltime = gmtime() - $cron['ipdel_day'] * 3600 * 24;
-        $sql = "DELETE FROM " . $ecs->table('stats') .
-        "WHERE  access_time < '$deltime'";
-        $db->query($sql);    
+        $limit = !empty($this->configure['ipdel_day']) ? $this->configure['ipdel_day'] : 7;
+        $deltime = RC_Time::gmtime() - $cron['ipdel_day'] * 3600 * 24;
+        RC_DB::table('stats')->where('access_time', '<', $deltime)->delete();
     }
-
 }
 
 // end
