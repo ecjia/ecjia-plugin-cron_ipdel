@@ -8,7 +8,7 @@ defined('IN_ECJIA') or exit('No permission resources.');
 return array(
 	'ipdel' 		=> '浏览日志删除',
 	'ipdel_desc' 	=> '删除浏览日志',
-	'ipdel_day' 	=> '删除几天前浏览日志',
+	'ipdel_day' 	=> '删除几天前浏览日志：',
 		
 	'ipdel_day_range' => array(
 		'7' 	=> '7天',
