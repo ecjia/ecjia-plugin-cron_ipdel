@@ -72,6 +72,7 @@ class plugin_cron_ipdel {
 }
 
 Ecjia_PluginManager::extend('cron_ipdel', function() {
+    RC_Locale::loadPluginTextdomain('cron_ipdel');
     require_once RC_Plugin::plugin_dir_path(__FILE__) . 'cron_ipdel.class.php';
     return new cron_ipdel();
 });
