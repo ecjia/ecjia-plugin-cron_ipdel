@@ -49,7 +49,7 @@ Plugin Name: 浏览日志删除
 Plugin URI: http://www.ecjia.com/plugins/ecjia.cron_ipdel/
 Description: 删除浏览日志
 Author: ECJIA TEAM
-Version: 1.21.0
+Version: 1.30.0
 Author URI: http://www.ecjia.com/
 Plugin App: cron
 */
